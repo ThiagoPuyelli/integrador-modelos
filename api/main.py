@@ -46,6 +46,6 @@ def imagen(imagen: int):
     image_path = os.path.join("img", "aproximacion" + str(imagen) + ".png")
     return FileResponse(image_path, media_type="image/png")
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+#if __name__ == "__main__":
+#    import uvicorn
+#    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
