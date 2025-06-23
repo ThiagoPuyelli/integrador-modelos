@@ -110,10 +110,10 @@ def generar_aproximacion(datos, numero):
     plt.close()
 
 def analizar_normalidad (datos):
-    stat, p_value = shapiro(datos)
+    stat, p_value = shapiro(datos) # Utilizamos Scipy para hacer uso de Shapiro-Wilk
     
     # Coeficiente de variación
     media = np.mean(datos)
-    std_dev = np.std(datos, ddof=0)  # ddof=0 para usar la desviación estándar poblacional
+    std_dev = np.std(datos, ddof=0)
     cv = std_dev / media
     return cv, cv <= 0.25, p_value, p_value > 0.05
