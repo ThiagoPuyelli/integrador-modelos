@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulación de Copas de Champagne</title>
+    <script type="text/javascript" src="../static/main.js" defer></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        #grafico {
+            margin-top: 20px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        .imagenSimulador {
+            width: 45%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .imagenSimulador img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a la simulación de copas de champagne!</h1>
+
+    <div class="card">
+        <h2>Ingresa la cantidad de renglones para simular!</h2>
+        <div class="form-group">
+            <label for="renglones">Cantidad de renglones</label>
+            <input type="text" id="renglones" placeholder="Renglones">
+        </div>
+        <button type="button" id="enviarSimulacion">Simular</button>
+        <p style="display: none;" id="cargando">Cargando...</p>
+        <div id="grafico">
+            <div class="imagenSimulador i4"></div>
+            <div class="imagenSimulador i0"></div>
+            <div class="imagenSimulador i1"></div>
+            <div class="imagenSimulador i2"></div>
+            <div class="imagenSimulador i3"></div>
+        </div>
+        <p id="mensaje"></p>
+    </div>
+</body>
+</html>
